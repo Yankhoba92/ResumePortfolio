@@ -1,5 +1,6 @@
 import { useState } from 'react'
-
+import logo from "../assets/logo.png"
+import "../index.css"
 
 function Nav() {
 
@@ -8,7 +9,7 @@ function Nav() {
     <>
       <header>
         <nav>
-            <div className="logo"><img src="" alt="" /></div>
+            <div className="logo"><img src={logo} alt="logo" /></div>
             <ul>
                 <li><a href="#">A propos</a></li>
                 <li><a href="#">Réalisations</a></li>
