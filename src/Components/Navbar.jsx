@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import logo from "../assets/logo.png"
-import "../index.css"
+import logo from "../assets/media/logo.png"
+import { Link } from 'react-router-dom'
+
+
 
 function Nav() {
 
@@ -11,10 +13,10 @@ function Nav() {
         <nav>
             <div className="logo"><img src={logo} alt="logo" /></div>
             <ul>
-                <li><a href="#">A propos</a></li>
-                <li><a href="#">Réalisations</a></li>
-                <li><a href="#">Experiences</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><Link to="/">A propos</Link></li>
+                <li><Link to="/competences">Compétences</Link></li>
+                <li><Link to="/portfolio">Portfolio</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
             </ul>
         </nav>
       </header>
