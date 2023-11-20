@@ -6,6 +6,7 @@ function Competences() {
   return (
     <>
       <Nav />
+      <p>Bonjour</p>
     </>
   );
 }
