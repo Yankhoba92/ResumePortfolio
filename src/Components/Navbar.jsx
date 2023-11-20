@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import logo from "../assets/media/logoV2.png"
+import logo from "../assets/media/logo.png"
 import { Link } from 'react-router-dom'
 
 
