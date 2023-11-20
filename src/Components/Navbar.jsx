@@ -1,7 +1,9 @@
 import { useState } from 'react'
-import './index.css'
 
-function App() {
+
+function Nav() {
+
+
   return (
     <>
       
@@ -9,4 +11,4 @@ function App() {
   )
 }
 
-export default App
+export default Nav
