@@ -9,6 +9,9 @@
   padding: 0;
   font-family: 'Poppins',sans-serif;
 }
+body{
+  background-color: #66CCCC;
+}
 
 
 nav {
@@ -67,13 +70,6 @@ h1{
   -moz-border-radius: 2rem;
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
-}
-.hero {
-  background-image: url("../assets/media/teal-30.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
 }
 .aboutContent {
   width: 100vw;

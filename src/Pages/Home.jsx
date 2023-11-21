@@ -6,8 +6,9 @@ import Me from "../assets/media/N1.png";
 function Home() {
   return (
     <>
+    <Nav />
       <section className="hero">
-        <Nav />
+        
         <div className="aboutContent">
           <div>
             <span className="hello">Salut, je suis</span><br />
