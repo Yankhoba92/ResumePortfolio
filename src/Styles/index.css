@@ -3,29 +3,31 @@
   line-height: 1.5;
   font-weight: 400;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins',sans-serif;
 }
-.hero {
-  background-image: url("../assets/media/teal-30.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-}
+
 
 nav {
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+
 }
 ul {
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+ul li a:hover{
+  color: white;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid white;
 }
 a {
   text-decoration: none;
@@ -35,16 +37,13 @@ a {
 }
 .logo {
   width: 5rem;
+  object-fit: cover;
 }
 img {
   width: 100%;
 }
 
-.about {
-  text-align: center;
-  color: #181E38;
-  font-weight: bolder;
-}
+
 .aboutImg{
   width: 40rem;
   display: block;
@@ -53,4 +52,52 @@ img {
 }
 h1{
   font-weight: bolder;
+}
+.linkContact{
+  width: 1rem;
+  background-color: #181E38;
+  color: #66CCCC;
+}
+.buttonAbout{
+  margin: 2rem;
+  border: none;
+  padding: 1rem 1rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+.hero {
+  background-image: url("../assets/media/teal-30.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.aboutContent {
+  width: 100vw;
+  max-width: 86rem;
+  padding-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #181E38;
+  font-weight: bolder;
+  margin: 0 auto;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  height: 39rem;
+}
+.hello{
+    font-size: 1.75;
+    font-weight: 100;
+}
+.aboutName{
+  color: aliceblue;
+}
+.para{
+  font-size: medium;
+  font-weight: 500;
 }

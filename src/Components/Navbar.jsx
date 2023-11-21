@@ -16,7 +16,9 @@ function Nav() {
                 <li><Link to="/">A propos</Link></li>
                 <li><Link to="/competences">Compétences</Link></li>
                 <li><Link to="/portfolio">Portfolio</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
+            </ul>
+            <ul>
+              <li><Link to="/contact" className='linkContact'>Contact</Link></li>
             </ul>
         </nav>
       </header>

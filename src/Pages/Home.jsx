@@ -1,23 +1,38 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../Components/Navbar";
-import Me from "../assets/media/N1.png"
+import Me from "../assets/media/N1.png";
 
 function Home() {
   return (
     <>
-      <div className="hero">
+      <section className="hero">
         <Nav />
-        <div className="about">
-        <div className="aboutImg"><img src={Me} alt="" /></div>
-          <h1>
-           Developpeur Web
-          </h1>
-          <Link to="/competences">
-            <button>En savoir plus</button>
-          </Link>
+        <div className="aboutContent">
+          <div>
+            <span className="hello">Salut, je suis</span><br />
+            <span>
+               <h1 className="aboutName">BAGAYOKO Yankhoba</h1>
+
+              Developpeur Application Web
+            </span>
+            <p className="para">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br /> Sint
+              Corrupti doloremque dicta, eius, quaerat tempora illo,<br /> alias velit
+              similique corporis error quis.
+            </p>
+            <button className="buttonAbout">
+              <Link to="/competences">En savoir plus </Link>
+            </button>
+          </div>
+
+
+
+          <div className="aboutImg">
+            <img src={Me} alt="profil" />
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }
