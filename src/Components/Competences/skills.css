@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+  }
+#skill{
+    background-color: #181E38;
+    height: 85vh;
+}
+.skill__description{
+  
+    font-weight: bold;
+    font-size:3rem ;
+    color: #fff;
+    text-align: justify;
+}
+.skills{
+    padding-top: 13rem;
+    width: 80rem;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.skillBars{
+    margin-top: 3rem;
+    width: 80rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.skillBars h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:3rem ;
+}
+.skillBars__langages h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:1.5rem ;
+}
+.skillBars__experiences{
+    overflow: hidden;
+    width: 100vw;
+    max-width: 75rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   margin: 0 auto;
+}
+.skillBars__experience_img{
+    width: 5rem;
+    object-fit: cover;
+    margin-right: 2rem;
+}
+.skillBars__experience_img img{
+    width: 100%;
+}
+.skillBars__descriptions{
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+}
+.skillBars__experience{
+    margin: 1.5rem;
+    width: 100vw;
+    max-width: 80%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: #51c6c6;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}

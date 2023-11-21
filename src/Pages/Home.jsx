@@ -13,7 +13,7 @@ function Home() {
           <div>
             <span className="hello">Salut, je suis</span><br />
             <span>
-               <h1 className="aboutName">BAGAYOKO Yankhoba</h1>
+               <h1 className="aboutName">Yankhoba</h1>
 
               Developpeur Application Web
             </span>

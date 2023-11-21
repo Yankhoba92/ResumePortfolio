@@ -1,12 +1,13 @@
 import { useState } from "react";
-
 import Nav from "../Components/Navbar";
+
+import Skills from "../Components/Competences/Skills";
 
 function Competences() {
   return (
     <>
       <Nav />
-      <p>Bonjour</p>
+      <Skills />
     </>
   );
 }
