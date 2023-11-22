@@ -14,18 +14,18 @@ const skillsData = [
 const experiencesData = [
   {
     imgSrc: "https://placehold.co/100x100",
-    title: "UI/UX Design",
-    description: "This is a demo",
+    title: "Conseiller Numérique",
+    description: "E.N.S.E.M.B.L.E.",
   },
   {
     imgSrc: "https://placehold.co/100x100",
-    title: "App",
-    description: "This is a demo text, you can write",
+    title: "Développeur application saas",
+    description: "GENIUNOM",
   },
   {
     imgSrc: "https://placehold.co/100x100",
-    title: "Website",
-    description: "This is a demo text, you can write",
+    title: "Développeur integrateur web",
+    description: "PoleS ",
   },
 ];
 
@@ -63,14 +63,13 @@ function Skills() {
           debitis ab quasi.
         </p>
         <div className="skillBars__experiences">
-          <div className="skillBars__experiences">
-            {experiencesData.map((experience, index) => (
-              <Experience key={index} {...experience} />
-            ))}
-          </div>
+          {experiencesData.map((experience, index) => (
+            <Experience key={index} {...experience} />
+          ))}
         </div>
       </section>
     </>
   );
 }
+
 export default Skills;

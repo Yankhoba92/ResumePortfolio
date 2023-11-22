@@ -1,4 +1,3 @@
-// Experience.js
 import React from "react";
 
 const Experience = ({ imgSrc, title, description }) => (
