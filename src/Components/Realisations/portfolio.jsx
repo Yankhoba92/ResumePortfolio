@@ -3,35 +3,23 @@ import "./portfolio.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
-function MyVerticallyCenteredModal(props) {
+function MyVerticallyCenteredModal({ show, onHide, title, content }) {
   return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
+    <Modal {...{ show, onHide }} size="lg" centered>
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
+        <Modal.Title id="contained-modal-title-vcenter">{title}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+        <h4>{title}</h4>
+        <p>{content}</p>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button onClick={onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
   );
 }
-
-function RealisationImage({ src }) {
+function RealisationImage({ src, title, content }) {
   const [modalShow, setModalShow] = useState(false);
 
   return (
@@ -45,6 +33,8 @@ function RealisationImage({ src }) {
       <MyVerticallyCenteredModal
         show={modalShow}
         onHide={() => setModalShow(false)}
+        title={title}
+        content={content}
       />
     </div>
   );
@@ -53,18 +43,31 @@ function RealisationImage({ src }) {
 function Realisation() {
   const [showMore, setShowMore] = useState(false);
 
-  const realisationsImgs = [
-    "https://placehold.co/100x100",
-    "https://placehold.co/100x100",
-    "https://placehold.co/100x100",
-    "https://placehold.co/100x100",
-    "https://placehold.co/100x100",
-    "https://placehold.co/100x100",
+  const realisationsData = [
+    {
+      src: "https://placehold.co/100x100",
+      title: "Title 1",
+      content: "Content 1",
+    },
+    {
+      src: "https://placehold.co/100x100",
+      title: "Title 2",
+      content: "Content 2",
+    },
+    {
+      src: "https://placehold.co/100x100",
+      title: "Title 3",
+      content: "Content 3",
+    },
+    {
+      src: "https://placehold.co/100x100",
+      title: "Title 4",
+      content: "Content 4",
+    },
   ];
-
-  const visibleImgs = showMore
-    ? realisationsImgs
-    : realisationsImgs.slice(0, 3);
+  const visibleData = showMore
+    ? realisationsData
+    : realisationsData.slice(0, 3);
 
   return (
     <>
@@ -85,11 +88,16 @@ function Realisation() {
           chemin.
         </p>
         <div className="realisationsImgs">
-          {visibleImgs.map((src, index) => (
-            <RealisationImage key={index} src={src} />
+          {visibleData.map(({ src, title, content }, index) => (
+            <RealisationImage
+              key={index}
+              src={src}
+              title={title}
+              content={content}
+            />
           ))}
         </div>
-        {realisationsImgs.length > 3 && (
+        {realisationsData.length > 3 && (
           <button
             className="realisationBtn"
             onClick={() => setShowMore(!showMore)}
