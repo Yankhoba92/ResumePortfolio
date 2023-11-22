@@ -44,9 +44,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     if (validateForm()) {
-      // Envoyer le formulaire - vous pouvez ajouter la logique d'envoi ici
       setSuccessMessage("Votre message a été envoyé avec succès!");
-      // Réinitialiser le formulaire après la soumission réussie
       setFormData({ name: "", email: "", message: "" });
     }
   };
