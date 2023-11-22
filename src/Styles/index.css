@@ -41,7 +41,7 @@ a {
   width: 5rem;
   object-fit: cover;
 }
-img {
+.logo img {
   width: 100%;
 }
 

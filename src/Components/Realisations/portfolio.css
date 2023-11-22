@@ -1,5 +1,22 @@
-#realisation{
-    margin: 0 auto;
+#citation{
+    background-color: #181e38;
+  height: 85vh;
+}
+.description{
+    padding-top: 13rem;
+  width: 80rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.citationDescription{
+    font-weight: bold;
+  font-size: 3rem;
+  color: #fff;
+  text-align: justify;
+}
+
+#realisations{
+    margin: 5rem auto;
     width: 100vw;
     max-width: 60rem;
     display: flex;
@@ -8,4 +25,36 @@
     justify-content: center;
     text-align: center;
     padding: 0 1rem;
+}
+.realisationsTitle{
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+.realisationsDescription{
+    font-weight: 300;
+    font-size: 1rem;
+}
+.realisationsImgs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    max-width: 65rem;
+}
+.realisationImg{
+    object-fit: cover;
+    height: 20rem;
+    margin: 0.5rem;
+}
+.realisationBtn{
+    margin: 3rem 0 ;
+    padding: 0.5rem 2.5rem;
+    border: none;
+    background-color: #fff;
+    border-radius: 2rem;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    -ms-border-radius: none;
+    -o-border-radius: none;
 }
