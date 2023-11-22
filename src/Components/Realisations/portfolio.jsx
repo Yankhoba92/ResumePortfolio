@@ -1,13 +1,7 @@
 import { useState } from "react";
 import "./portfolio.css";
 
-const commonCitation = (
-  <p className="citationDescription">
-    La vraie sagesse réside dans la mise en pratique. <br />
-    C'est là que le savoir devient expérience,
-    <br /> et l'expérience, une leçon qui guide notre chemin.
-  </p>
-);
+
 
 const RealisationImage = ({ src }) => (
   <img src={src} alt="" className="realisationImg" />
@@ -30,7 +24,11 @@ function Realisation() {
   return (
     <>
       <section id="citation">
-        <div className="description">{commonCitation}</div>
+        <div className="description"><p className="citationDescription">
+    La vraie sagesse réside dans la mise en pratique. <br />
+    C'est là que le savoir devient expérience,
+    <br /> et l'expérience, une leçon qui guide notre chemin.
+  </p></div>
       </section>
       <section id="realisations">
         <h2 className="realisationsTitle">My Portfolio</h2>
