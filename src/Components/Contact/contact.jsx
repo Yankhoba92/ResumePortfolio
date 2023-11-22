@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./contact.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -51,43 +52,62 @@ const ContactForm = () => {
 
   return (
     <div>
-      <h2>Contactez-nous</h2>
+      <div className="contactContent">
+        <h1 className="contactTitre">Contactez moi</h1>
+        <span className="contactDescription">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          odio error, quia a saepe dolorum enim,
+          <br /> est quasi, tempore eligendi placeat architecto! Saepe amet
+          dolorum sit fugit consequatur ullam deserunt.
+        </span>
+      
+
       {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Nom:</label>
+      <form className="contactForm" onSubmit={handleSubmit}>
+       
+          <label htmlFor="name"/>
           <input
+            placeholder="Votre Nom"
             type="text"
             id="name"
             name="name"
+            className="name"
             value={formData.name}
             onChange={handleChange}
           />
           {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
+        
+        
+          <label htmlFor="email"/>
           <input
+            placeholder="Votre Mail"
             type="email"
             id="email"
             name="email"
+            className="email"
             value={formData.email}
             onChange={handleChange}
           />
           {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
+        
+        
+          <label htmlFor="message"/>
           <textarea
+            placeholder="Votre Message"
             id="message"
             name="message"
+            className="message"
+            rows={7}
             value={formData.message}
             onChange={handleChange}
           />
           {errors.message && <p style={{ color: "red" }}>{errors.message}</p>}
-        </div>
-        <button type="submit">Envoyer</button>
+        
+        <button type="submit" value="send">
+          Envoyer
+        </button>
       </form>
+      </div>
     </div>
   );
 };
