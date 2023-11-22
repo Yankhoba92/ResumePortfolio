@@ -1,8 +1,7 @@
 import ProgressBar from "react-bootstrap/ProgressBar";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col } from "react-bootstrap";
 import "./skills.css";
+import Experience from "./experiences";
 
 const skillsData = [
   { name: "Html & css", percentage: 60 },
@@ -11,6 +10,23 @@ const skillsData = [
   { name: "Node Js", percentage: 60 },
   { name: "php", percentage: 60 },
   { name: "Symfony", percentage: 60 },
+];
+const experiencesData = [
+  {
+    imgSrc: "https://placehold.co/100x100",
+    title: "UI/UX Design",
+    description: "This is a demo",
+  },
+  {
+    imgSrc: "https://placehold.co/100x100",
+    title: "App",
+    description: "This is a demo text, you can write",
+  },
+  {
+    imgSrc: "https://placehold.co/100x100",
+    title: "Website",
+    description: "This is a demo text, you can write",
+  },
 ];
 
 function Skills() {
@@ -29,10 +45,10 @@ function Skills() {
         <div className="skillBars__langages">
           <Container gap={5} className="row">
             <Row>
-              {skillsData.map((skill, index) => (
-                <Col key={index} md={6} className="p-5">
+              {skillsData.map((skill) => (
+                <Col key={skill.name} md={6} className="p-5">
                   <h3>{skill.name}</h3>
-                  <ProgressBar animated now={skill.percentage} />
+                  <ProgressBar animated now={parseFloat(skill.percentage)} />
                 </Col>
               ))}
             </Row>
@@ -47,37 +63,14 @@ function Skills() {
           debitis ab quasi.
         </p>
         <div className="skillBars__experiences">
-          <div className="skillBars__experience">
-            <div className="skillBars__experience_img">
-              <img src="https://placehold.co/100x100" alt="Design" />
-            </div>
-            <div className="skillBars__experienceText">
-              <h3>UI/UX Design</h3>
-              <p>This is a demo</p>
-            </div>
-          </div>
-          <div className="skillBars__experience">
-            <div className="skillBars__experience_img">
-              <img src="https://placehold.co/100x100" alt="Design" />
-            </div>
-            <div className="skillBars__experienceText">
-              <h3>App</h3>
-              <p>This is a demo text, you can write</p>
-            </div>
-          </div>
-          <div className="skillBars__experience">
-            <div className="skillBars__experience_img">
-              <img src="https://placehold.co/100x100" alt="Design" />
-            </div>
-            <div className="skillBars__experienceText">
-              <h3>Website</h3>
-              <p>This is a demo text, you can write</p>
-            </div>
+          <div className="skillBars__experiences">
+            {experiencesData.map((experience, index) => (
+              <Experience key={index} {...experience} />
+            ))}
           </div>
         </div>
       </section>
     </>
   );
 }
-
 export default Skills;
