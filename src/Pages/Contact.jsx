@@ -1,11 +1,11 @@
-import { useState } from "react";
-
 import Nav from "../Components/Navbar";
+import ContactForm from "../Components/Contact/contact";
 
 function Contact() {
   return (
     <>
       <Nav />
+      <ContactForm/>
     </>
   );
 }
