@@ -27,15 +27,15 @@ function Skills() {
       <section className="skillBars">
         <h2>Langages</h2>
         <div className="skillBars__langages">
-          <Container gap={5}>
-            {skillsData.map((skill, index) => (
-              <Row key={index} className="p-5">
-                <Col>
+          <Container gap={5} className="row">
+            <Row>
+              {skillsData.map((skill, index) => (
+                <Col key={index} md={6} className="p-5">
                   <h3>{skill.name}</h3>
                   <ProgressBar animated now={skill.percentage} />
                 </Col>
-              </Row>
-            ))}
+              ))}
+            </Row>
           </Container>
         </div>
       </section>
