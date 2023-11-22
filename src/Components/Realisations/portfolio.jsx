@@ -1,19 +1,36 @@
 import { useState } from "react";
 import "./portfolio.css";
 
+const commonCitation = (
+  <p className="citationDescription">
+    La vraie sagesse réside dans la mise en pratique. <br />
+    C'est là que le savoir devient expérience,
+    <br /> et l'expérience, une leçon qui guide notre chemin.
+  </p>
+);
+
+const RealisationImage = ({ src }) => (
+  <img src={src} alt="" className="realisationImg" />
+);
 
 function Realisation() {
-  const [modalShow, setModalShow] = useState(false);
+  const [showMore, setShowMore] = useState(false);
+
+  const realisationsImgs = [
+    "https://placehold.co/100x100",
+    "https://placehold.co/100x100",
+    "https://placehold.co/100x100",
+    "https://placehold.co/100x100",
+    "https://placehold.co/100x100",
+    "https://placehold.co/100x100",
+  ];
+
+  const visibleImgs = showMore ? realisationsImgs : realisationsImgs.slice(0, 3);
+
   return (
     <>
       <section id="citation">
-        <div className="description">
-          <p className="citationDescription">
-            La vraie sagesse réside dans la mise en pratique. <br />
-            C'est là que le savoir devient expérience,
-            <br /> et l'expérience,une leçon qui guide notre chemin.
-          </p>
-        </div>
+        <div className="description">{commonCitation}</div>
       </section>
       <section id="realisations">
         <h2 className="realisationsTitle">My Portfolio</h2>
@@ -23,41 +40,15 @@ function Realisation() {
           chemin.
         </p>
         <div className="realisationsImgs">
-            
-          <img
-            src="https://placehold.co/100x100"
-            alt=""
-            className="realisationImg"
-          />
-          <img
-            src="https://placehold.co/100x100"
-            alt=""
-            className="realisationImg"
-          />
-          <img
-            src="https://placehold.co/100x100"
-            alt=""
-            className="realisationImg"
-          />
-          <img
-            src="https://placehold.co/100x100"
-            alt=""
-            className="realisationImg"
-          />
-          <img
-            src="https://placehold.co/100x100"
-            alt=""
-            className="realisationImg"
-          />
-          <img
-            src="https://placehold.co/100x100"
-            alt=""
-            className="realisationImg"
-          />
+          {visibleImgs.map((src, index) => (
+            <RealisationImage key={index} src={src} />
+          ))}
         </div>
-        <button className="realisationBtn">
-    Voir Plus
-        </button>
+        {realisationsImgs.length > 3 && (
+          <button className="realisationBtn" onClick={() => setShowMore(!showMore)}>
+            {showMore ? "Voir Moins" : "Voir Plus"}
+          </button>
+        )}
       </section>
     </>
   );
