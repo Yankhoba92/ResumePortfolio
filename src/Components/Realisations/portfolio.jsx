@@ -46,8 +46,13 @@ function Realisation() {
   const [showMore, setShowMore] = useState(false);
 
   const handleShowMoreClick = () => {
-    setShowMore(!showMore);
-    setVisibleDataCount(showMore ? 3 : realisationsData.length);
+    if (visibleDataCount < realisationsData.length) {
+      // S'il reste des images à afficher, ajoutez 3 images supplémentaires.
+      setVisibleDataCount((prevCount) => prevCount + 3);
+    } else {
+      // Si toutes les images sont déjà affichées, réinitialisez le nombre d'images affichées à 3.
+      setVisibleDataCount(3);
+    }
   };
   return (
     <>
@@ -68,23 +73,25 @@ function Realisation() {
           chemin.
         </p>
         <div className="realisationsImgs">
-        {realisationsData.slice(0, visibleDataCount).map(({ src, title, content }, index) => (
-          <RealisationImage
-            key={index}
-            src={src}
-            title={title}
-            content={content}
-          />
-        ))}
-      </div>
-      {realisationsData.length > 3 && (
-        <button
+          {realisationsData
+            .slice(0, visibleDataCount)
+            .map(({ src, title, content, id }) => (
+              <RealisationImage
+                key={id}
+                src={src}
+                title={title}
+                content={content}
+              />
+            ))}
+        </div>
+        {realisationsData.length > 3 && (
+          <button
           className="realisationBtn"
           onClick={handleShowMoreClick}
         >
-          {showMore ? "Voir Moins" : "Voir Plus"}
+          {visibleDataCount < realisationsData.length ? "Voir Plus" : "Voir Moins"}
         </button>
-      )}
+        )}
       </section>
     </>
   );
