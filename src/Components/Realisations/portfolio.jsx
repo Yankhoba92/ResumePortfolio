@@ -3,8 +3,10 @@ import "./portfolio.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { realisationsData } from "./dataPortfolio";
+import { Link } from "react-router-dom";
 
-function MyVerticallyCenteredModal({ show, onHide, title, content }) {
+
+function MyVerticallyCenteredModal({ show, onHide, title, description, link, langage }) {
   return (
     <Modal {...{ show, onHide }} size="lg" centered>
       <Modal.Header closeButton>
@@ -12,7 +14,9 @@ function MyVerticallyCenteredModal({ show, onHide, title, content }) {
       </Modal.Header>
       <Modal.Body>
         <h4>{title}</h4>
-        <p>{content}</p>
+        <p>{description}</p>
+        <Link to={link} target="_blank">Lien</Link>
+        <p>{langage}</p>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={onHide}>Close</Button>
@@ -20,7 +24,7 @@ function MyVerticallyCenteredModal({ show, onHide, title, content }) {
     </Modal>
   );
 }
-function RealisationImage({ src, title, content }) {
+function RealisationImage({ src, title, description, link, langage }) {
   const [modalShow, setModalShow] = useState(false);
 
   return (
@@ -35,8 +39,9 @@ function RealisationImage({ src, title, content }) {
         show={modalShow}
         onHide={() => setModalShow(false)}
         title={title}
-        content={content}
-      />
+        description={description}
+        link={link}
+        langage= {langage}      />
     </div>
   );
 }
@@ -75,12 +80,14 @@ function Realisation() {
         <div className="realisationsImgs">
           {realisationsData
             .slice(0, visibleDataCount)
-            .map(({ src, title, content, id }) => (
+            .map(({ src, title, description, id, link, langage }) => (
               <RealisationImage
                 key={id}
                 src={src}
                 title={title}
-                content={content}
+                description={description}
+                link={link}
+                langage={langage}
               />
             ))}
         </div>

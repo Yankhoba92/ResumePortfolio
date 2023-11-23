@@ -1,8 +1,12 @@
+
+
 export const realisationsData = [
     {
         src: "https://placehold.co/100x100",
-        title: "Title 1",
-        content: "Content 1",
+        title: "Portfolio",
+        link: "https://ybagayoko.ma6tvacoder.org/",
+        langage: "HTML&CSS, JavaScript, PHP",
+        description: "Site CV créer en 2020",
       },
       {
         src: "https://placehold.co/100x100",
