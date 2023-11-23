@@ -44,9 +44,10 @@
   max-width: 65rem;
 }
 .realisationImg {
-  object-fit: cover;
-  height: 20rem;
-  margin: 0.5rem;
+    object-fit: cover;
+    height: 20rem;
+    margin: 0.5rem;
+    width: 16rem;
 }
 .realisationBtn {
   margin: 3rem 0;
@@ -58,4 +59,15 @@
   -moz-border-radius: none;
   -ms-border-radius: none;
   -o-border-radius: none;
+}
+.modalTechno{
+    font-weight: bold;
+}
+.modalLinko{
+    color: #181e38;
+}
+.modalImg{
+    height: auto;
+    width: auto;
+    object-fit: cover;
 }

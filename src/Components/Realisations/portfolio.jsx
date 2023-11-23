@@ -6,17 +6,18 @@ import { realisationsData } from "./dataPortfolio";
 import { Link } from "react-router-dom";
 
 
-function MyVerticallyCenteredModal({ show, onHide, title, description, link, langage }) {
+function MyVerticallyCenteredModal({ show, onHide, title, description, link, langage, src }) {
   return (
     <Modal {...{ show, onHide }} size="lg" centered>
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">{title}</Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-        <h4>{title}</h4>
+      <Modal.Body className="p-1">
+        <p><span className="modalTechno">Langages et technologies :</span>{langage}</p>
+
         <p>{description}</p>
-        <Link to={link} target="_blank">Lien</Link>
-        <p>{langage}</p>
+        <Link to={link} className="modalLinko" target="_blank">Lien</Link>
+        <div className="modalImg"><img src={src} alt="" /></div>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={onHide}>Close</Button>
@@ -41,7 +42,8 @@ function RealisationImage({ src, title, description, link, langage }) {
         title={title}
         description={description}
         link={link}
-        langage= {langage}      />
+        langage= {langage} 
+        src={src}     />
     </div>
   );
 }
