@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./portfolio.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import { realisationsData } from "./dataPortfolio";
 
 function MyVerticallyCenteredModal({ show, onHide, title, content }) {
   return (
@@ -41,34 +42,13 @@ function RealisationImage({ src, title, content }) {
 }
 
 function Realisation() {
+  const [visibleDataCount, setVisibleDataCount] = useState(3);
   const [showMore, setShowMore] = useState(false);
 
-  const realisationsData = [
-    {
-      src: "https://placehold.co/100x100",
-      title: "Title 1",
-      content: "Content 1",
-    },
-    {
-      src: "https://placehold.co/100x100",
-      title: "Title 2",
-      content: "Content 2",
-    },
-    {
-      src: "https://placehold.co/100x100",
-      title: "Title 3",
-      content: "Content 3",
-    },
-    {
-      src: "https://placehold.co/100x100",
-      title: "Title 4",
-      content: "Content 4",
-    },
-  ];
-  const visibleData = showMore
-    ? realisationsData
-    : realisationsData.slice(0, 3);
-
+  const handleShowMoreClick = () => {
+    setShowMore(!showMore);
+    setVisibleDataCount(showMore ? 3 : realisationsData.length);
+  };
   return (
     <>
       <section id="citation">
@@ -88,23 +68,23 @@ function Realisation() {
           chemin.
         </p>
         <div className="realisationsImgs">
-          {visibleData.map(({ src, title, content }, index) => (
-            <RealisationImage
-              key={index}
-              src={src}
-              title={title}
-              content={content}
-            />
-          ))}
-        </div>
-        {realisationsData.length > 3 && (
-          <button
-            className="realisationBtn"
-            onClick={() => setShowMore(!showMore)}
-          >
-            {showMore ? "Voir Moins" : "Voir Plus"}
-          </button>
-        )}
+        {realisationsData.slice(0, visibleDataCount).map(({ src, title, content }, index) => (
+          <RealisationImage
+            key={index}
+            src={src}
+            title={title}
+            content={content}
+          />
+        ))}
+      </div>
+      {realisationsData.length > 3 && (
+        <button
+          className="realisationBtn"
+          onClick={handleShowMoreClick}
+        >
+          {showMore ? "Voir Moins" : "Voir Plus"}
+        </button>
+      )}
       </section>
     </>
   );
