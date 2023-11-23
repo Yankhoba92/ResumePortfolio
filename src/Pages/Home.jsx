@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../Components/Navbar";
-import Me from "../assets/media/N1.png";
 import Footer from "../Components/Footer/Footer";
 
 function Home() {

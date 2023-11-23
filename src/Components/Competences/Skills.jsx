@@ -2,6 +2,9 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import { Container, Row, Col } from "react-bootstrap";
 import "./skills.css";
 import Experience from "./experiences";
+import logoCnfs from "../../assets/media/cnfs.png"
+import logoPoles from "../../assets/media/PoleS.png"
+import logoGeniunom from "../../assets/media/Stage.jpg"
 
 const skillsData = [
   { name: "Html & css", percentage: 60 },
@@ -13,17 +16,17 @@ const skillsData = [
 ];
 const experiencesData = [
   {
-    imgSrc: "https://placehold.co/100x100",
+    imgSrc: logoCnfs,
     title: "Conseiller Numérique",
     description: "E.N.S.E.M.B.L.E.",
   },
   {
-    imgSrc: "https://placehold.co/100x100",
+    imgSrc: logoGeniunom,
     title: "Développeur application saas",
     description: "GENIUNOM",
   },
   {
-    imgSrc: "https://placehold.co/100x100",
+    imgSrc: logoPoles,
     title: "Développeur integrateur web",
     description: "PoleS ",
   },
