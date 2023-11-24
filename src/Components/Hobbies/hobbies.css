@@ -1,8 +1,23 @@
 .hobbies{
     margin-top: 2rem;
-    width: 100vw;
-    height: 60rem;
+    padding: 2rem;
+    color: #181E38;
     text-align: center;
+    overflow: hidden;
+}
+.hobbies h2{
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3rem;
+}
+.hobbiesImg{
+    width: 13rem;
 
-
+}
+.hobbiesImg img{
+    width: 100%;
+    object-fit: cover;
+    padding: 1rem;
+    
 }

@@ -1,6 +1,7 @@
 .sectionExperience{
     background-color: #181e38;
     padding: 2rem;
+    overflow: hidden;
 }
 .experiences {
     margin-top: 3rem;

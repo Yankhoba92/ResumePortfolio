@@ -1,5 +1,7 @@
-import useState from "react";
-import './hobbies.css'
+import "./hobbies.css";
+import logoBall from "../../assets/media/cuisine.png";
+import logoCuisine from "../../assets/media/football.png";
+import logoTkdo from "../../assets/media/tkdo.png";
 import { Container, Row, Col } from "react-bootstrap";
 const Hobbies = () => {
   return (
@@ -10,24 +12,22 @@ const Hobbies = () => {
           <Row>
             <Col>
               <div className="hobbiesImg">
-                <img src="https://placehold.co/100x100" alt="" />
+                <img src={logoBall} alt="" />
+                <h3>Cuisine</h3>
               </div>
-              <p>Football</p>
             </Col>
             <Col>
               <div className="hobbiesImg">
-                <img src="https://placehold.co/100x100" alt="" />
+                <img src={logoCuisine} alt="" />
+                <h3>Football</h3>
               </div>
-              <p>Cuisine</p>
             </Col>
             <Col>
               <div className="hobbiesImg">
-                <img src="https://placehold.co/100x100" alt="" />
+                <img src={logoTkdo} alt="" />
+                <h3>Taekwondo</h3>
               </div>
-              <p>Taekwondo</p>
             </Col>
-            
-            
           </Row>
         </Container>
       </section>
