@@ -25,9 +25,9 @@ ul {
   align-items: center;
 }
 ul li a:hover{
-  color: white;
+  color: #fff;
   padding-bottom: 0.5rem;
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid #fff;
 }
 a {
   text-decoration: none;
@@ -36,7 +36,7 @@ a {
   font-size: larger;
 }
 .logo {
-  width: 5rem;
+  width: 4rem;
   object-fit: cover;
 }
 .logo img {

@@ -1,5 +1,5 @@
 import logo from "../assets/media/logo.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Nav() {
   return (
@@ -7,26 +7,68 @@ function Nav() {
       <header>
         <nav>
           <div className="logo">
-            <Link to="/">
+            <NavLink to="/">
               <img src={logo} alt="logo" />
-            </Link>
+            </NavLink>
           </div>
           <ul>
             <li>
-              <Link to="/">A propos</Link>
+              <NavLink
+                to="/"
+                style={({ isActive }) => {
+                  return {
+                    fontWeight: isActive ? "bold" : "",
+                    color: isActive ? "white" : "#181E38",
+                    borderBottom: isActive ? "3px solid #fff" : "",
+                  };
+                }}
+              >
+                A propos
+              </NavLink>
             </li>
             <li>
-              <Link to="/competences">Compétences</Link>
+              <NavLink
+                to="/competences"
+                style={({ isActive }) => {
+                  return {
+                    fontWeight: isActive ? "bold" : "",
+                    color: isActive ? "white" : "#181E38",
+                    borderBottom: isActive ? "3px solid #fff" : "",
+                  };
+                }}
+              >
+                Compétences
+              </NavLink>
             </li>
             <li>
-              <Link to="/portfolio">Portfolio</Link>
+              <NavLink
+                to="/portfolio"
+                style={({ isActive }) => {
+                  return {
+                    fontWeight: isActive ? "bold" : "",
+                    color: isActive ? "wgite" : "#181E38",
+                    borderBottom: isActive ? "3px solid #fff" : "",
+                  };
+                }}
+              >
+                Portfolio
+              </NavLink>
             </li>
           </ul>
           <ul>
             <li>
-              <Link to="/contact" className="linkContact">
+              <NavLink
+                to="/contact"
+                className="linkContact"
+                style={({ isActive, isPending, isTransitioning }) => {
+                  return {
+                    fontWeight: isActive ? "bold" : "",
+                    color: isPending ? "red" : "#181E38",
+                  };
+                }}
+              >
                 Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>
