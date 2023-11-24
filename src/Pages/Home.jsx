@@ -1,7 +1,6 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../Components/Navbar";
-import Footer from "../Components/Footer/Footer";
+import Avatar from "../assets/media/avatar.png";
 
 function Home() {
   return (
@@ -17,17 +16,31 @@ function Home() {
               Developpeur Application Web
             </span>
             <p className="para">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              <br /> Sint Corrupti doloremque dicta, eius, quaerat tempora illo,
-              <br /> alias velit similique corporis error quis.
+              Passionné par le codage au fils de mon parcours, je suis
+              développeur intégrateur web.<br />Passant par une formation chez Le
+              PoleS, j'ai pu développer des compétences en <br /> : HTML, CSS,
+              Javascript, jQuery, PHP, Symfony, Wordpress, Bootstrap et des
+              notions en :<br /> Angular et AJAX. Puis je me suis spécialiser dans le
+              front-end en travaillant avec le framework REACT
+              
+              
             </p>
             <button className="buttonAbout">
               <Link to="/competences">En savoir plus </Link>
             </button>
           </div>
+          <div className="aboutAvatar">
+            <div className="aboutAvatar__img">
+              <img src={Avatar} alt="" />
+            </div>
+            <div className="downloadButton">
+              <a href={Avatar} download>
+                Télécharger mon cv
+              </a>
+            </div>
+          </div>
         </div>
       </section>
-      <Footer/>
     </>
   );
 }

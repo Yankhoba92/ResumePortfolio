@@ -11,8 +11,6 @@
 body{
   background-color: #66CCCC;
 }
-
-
 nav {
   padding: 1rem;
   display: flex;
@@ -80,6 +78,17 @@ h1{
   font-weight: 500;
   height: 39rem;
 }
+.downloadButton{
+  background-color: #66CCCC;
+  color: #181E38;
+  text-align: center;
+  margin: 1rem;
+  border-radius:0.5rem ;
+  -webkit-border-radius:0.5rem ;
+  -moz-border-radius:0.5rem ;
+  -ms-border-radius:0.5rem ;
+  -o-border-radius:0.5rem ;
+}
 .hello{
     font-size: 1.75;
     font-weight: 100;
@@ -93,4 +102,12 @@ h1{
 }
 .hero{
   background-color: #181E38;
+  height: calc(100vh - 6rem);
+}
+.aboutAvatar__img{
+  padding: 0;
+}
+.aboutAvatar__img img{
+  width: 100%;
+  object-fit: cover;
 }
