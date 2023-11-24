@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Nav from "../Components/Navbar";
 import Avatar from "../assets/media/avatar.png";
+import "../Styles/index.css"
 
 function Home() {
   return (
@@ -8,7 +9,7 @@ function Home() {
       <Nav />
       <section className="hero">
         <div className="aboutContent">
-          <div>
+          <div className="aboutContent_text">
             <span className="hello">Salut, je suis</span>
             <br />
             <span>
@@ -17,7 +18,7 @@ function Home() {
             </span>
             <p className="para">
               Passionné par le codage au fils de mon parcours, je suis
-              développeur intégrateur web.<br />Passant par une formation chez Le
+              développeur Application web.<br />Passant par une formation chez Le
               PoleS, j'ai pu développer des compétences en <br /> : HTML, CSS,
               Javascript, jQuery, PHP, Symfony, Wordpress, Bootstrap et des
               notions en :<br /> Angular et AJAX. Puis je me suis spécialiser dans le

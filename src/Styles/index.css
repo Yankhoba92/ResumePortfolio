@@ -54,14 +54,12 @@ h1{
   color: #66CCCC;
 }
 .buttonAbout{
-  margin: 2rem;
+  margin-top: 3.5rem;
   border: none;
-  padding: 1rem 1rem;
-  border-radius: 2rem;
-  -webkit-border-radius: 2rem;
-  -moz-border-radius: 2rem;
-  -ms-border-radius: 2rem;
-  -o-border-radius: 2rem;
+  border-radius: 0.5rem;
+  background-color: #66CCCC;
+  color: #181E38;
+
 }
 .aboutContent {
   width: 100vw;
@@ -110,4 +108,7 @@ h1{
 .aboutAvatar__img img{
   width: 100%;
   object-fit: cover;
+}
+.aboutContent_text{
+  margin-top: 12rem;
 }
