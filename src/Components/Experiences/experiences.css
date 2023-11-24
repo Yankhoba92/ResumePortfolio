@@ -1,0 +1,65 @@
+.sectionExperience{
+    background-color: #181e38;
+    padding: 2rem;
+}
+.experiences {
+    margin-top: 3rem;
+    width: 80rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .experiences h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #66CCCC;
+  }
+
+  .experiences__List {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 75rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .experience__img {
+    width: 5rem;
+    object-fit: cover;
+    margin-right: 2rem;
+  }
+  .experience__img img {
+    width: 100%;
+  }
+  .experiences__descriptions{
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+    color: #66CCCC;
+  }
+  .experience{
+    margin: 1.5rem;
+    width: 100vw;
+    max-width: 80%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 1px 2px 9px -1px #000000;
+    background-color: #1d233f;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+  }
+  .experience__Text{
+    color: #66CCCC;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  
