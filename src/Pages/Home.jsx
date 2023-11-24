@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import Nav from "../Components/Navbar";
 import Avatar from "../assets/media/avatar.png";
 import "../Styles/index.css"
+import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
+
 
 function Home() {
   return (
@@ -36,7 +39,7 @@ function Home() {
             </div>
             <div className="downloadButton">
               <a href={Avatar} download>
-                Télécharger mon cv
+                Télécharger mon cv<FontAwesomeIcon icon={faDownload} beat />
               </a>
             </div>
           </div>
