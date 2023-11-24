@@ -33,7 +33,7 @@ function Nav() {
                   return {
                     fontWeight: isActive ? "bold" : "",
                     color: isActive ? "white" : "#181E38",
-                    borderBottom: isActive ? "3px solid #fff" : "",
+                    borderBottom: isActive ? "3px solid #fff" : ""
                   };
                 }}
               >
@@ -46,24 +46,23 @@ function Nav() {
                 style={({ isActive }) => {
                   return {
                     fontWeight: isActive ? "bold" : "",
-                    color: isActive ? "wgite" : "#181E38",
-                    borderBottom: isActive ? "3px solid #fff" : "",
+                    color: isActive ? "white" : "#181E38",
+                    borderBottom: isActive ? "3px solid #fff" : ""
                   };
                 }}
               >
                 Portfolio
               </NavLink>
             </li>
-          </ul>
-          <ul>
             <li>
               <NavLink
                 to="/contact"
-                className="linkContact"
-                style={({ isActive, isPending, isTransitioning }) => {
+
+                style={({ isActive }) => {
                   return {
                     fontWeight: isActive ? "bold" : "",
-                    color: isPending ? "red" : "#181E38",
+                    color: isActive ? "white" : "#181E38",
+                    borderBottom: isActive ? "3px solid #fff" : ""
                   };
                 }}
               >
@@ -71,6 +70,7 @@ function Nav() {
               </NavLink>
             </li>
           </ul>
+          
         </nav>
       </header>
     </>
