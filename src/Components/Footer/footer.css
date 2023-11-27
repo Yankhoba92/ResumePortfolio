@@ -8,4 +8,15 @@
     font-weight: 300;
     font-size: small;
     overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.social-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.social-box a{
+    color: #66CCCC;
 }
