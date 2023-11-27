@@ -1,0 +1,18 @@
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+}
+.social a img{
+    width: 100%;
+    object-fit: cover;
+}
+.social-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.social-box a{
+    color: #66CCCC;
+}

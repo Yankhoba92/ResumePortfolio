@@ -75,3 +75,26 @@
 .modalLink{
   color: #66CCCC;
 }
+
+  /*---------------------Media Queries----------------------*/
+  @media screen and (max-width: 1000px) {
+    .description {
+      padding-top: 13rem;
+      width: 80rem;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+    .citationDescription {
+      font-weight: 300;
+      color: #fff;
+      font-size: medium;
+      text-align: start;
+  }
+  #citation {
+    background-color: #181e38;
+    height: 45vh;
+    overflow: hidden;
+}
+  }
+
