@@ -21,3 +21,10 @@
     padding: 1rem;
     
 }
+  /*---------------------Media Queries----------------------*/
+  @media screen and (max-width: 1000px) {
+    .col {
+        display: flex;
+        justify-content: center;
+    }
+  }

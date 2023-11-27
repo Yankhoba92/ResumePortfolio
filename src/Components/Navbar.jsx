@@ -23,7 +23,7 @@ function Nav() {
                   };
                 }}
               >
-                A propos
+                Apropos
               </NavLink>
             </li>
             <li>

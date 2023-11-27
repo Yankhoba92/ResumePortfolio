@@ -126,9 +126,17 @@ h1 {
     font-weight: bold;
   }
   .hero{
-      background-color: #181e38;
+
       text-align: center;
       height: auto;
+  
+  }
+}
+@media screen and (max-width: 500px) {
+ 
+  ul li a{
+      margin: 0.5rem;
+      font-size: medium;
   
   }
 }

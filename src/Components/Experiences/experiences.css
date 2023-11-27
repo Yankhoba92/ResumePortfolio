@@ -63,4 +63,23 @@
     font-weight: 300;
     font-size: 1.5rem;
   }
+  /*---------------------Media Queries----------------------*/
+  @media screen and (max-width: 1000px) {
+    .experiences,
+    .experience {
+      width: 100%; /* Ajustez la largeur pour s'adapter à des écrans plus petits */
+    }
   
+    .experiences,
+    .experience {
+      padding-left: 1rem;
+      padding-right: 1rem; /* Ajoutez un peu de marge sur les côtés pour éviter une surcharge */
+    }
+  
+    .experience {
+      max-width: 100%; /* Ajustez la largeur maximale pour s'adapter à des écrans plus petits */
+    }
+    .experiences__List {
+      width: 100%;
+  }
+  }
