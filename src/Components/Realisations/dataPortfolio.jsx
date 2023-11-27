@@ -4,8 +4,16 @@ import Supakar from "../../assets/media/Supakar.png";
 import Restaurant from "../../assets/media/restaurant.jpeg";
 import Boxe from "../../assets/media/boxe.png";
 import Boutique from "../../assets/media/boutique.jpg";
+import Cinemax from "../../assets/media/cinemax.png"
 
 export const realisationsData = [
+  {
+    src: Cinemax,
+    title: "Cinemax",
+    link: "https://github.com/Yankhoba92/cinemax",
+    langage: "ReactJS & NodeJS",
+    description: "Cinemax est une app de recherche de film et permet d'ajouter une sélection en favoris.",
+  },
   {
     src: siteCv,
     title: "Portfolio",
@@ -19,7 +27,7 @@ export const realisationsData = [
     link: "https://master--cas-covid19.netlify.app/",
     langage: "React Js",
     description:
-      "Site CV créer en 2021 pour recenser les cas de covid mais l'api à malheuresement sauter. Mais le sitye est en cours de maintenance",
+      "Site CV créer en 2021 pour recenser les cas de covid mais l'api à malheuresement sauter. Mais le site est en cours de maintenance",
   },
   {
     src: Supakar,

@@ -16,7 +16,7 @@ function MyVerticallyCenteredModal({ show, onHide, title, description, link, lan
         <p><span className="modalTechno">Langages et technologies :</span>{langage}</p>
 
         <p>{description}</p>
-        <Link to={link} className="modalLinko" target="_blank">Lien</Link>
+        <Link to={link} className="modalLink" target="_blank">Lien du site</Link>
         
       </Modal.Body>
       <Modal.Footer>

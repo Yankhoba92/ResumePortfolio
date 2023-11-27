@@ -20,12 +20,7 @@ function Home() {
               Developpeur Application Web
             </span>
             <p className="para">
-              Passionné par le codage au fils de mon parcours, je suis
-              développeur Application web.<br />Passant par une formation chez Le
-              PoleS, j'ai pu développer des compétences en <br /> : HTML, CSS,
-              Javascript, jQuery, PHP, Symfony, Wordpress, Bootstrap et des
-              notions en :<br /> Angular et AJAX. Puis je me suis spécialiser dans le
-              front-end en travaillant avec le framework REACT
+            Passionnée par le développement web, j'aime expérimenter, <br/>découvrir et apprendre des nouvelles technologies.
               
               
             </p>
