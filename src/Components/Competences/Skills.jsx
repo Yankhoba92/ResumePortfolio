@@ -4,12 +4,12 @@ import "./skills.css";
 
 
 const skillsData = [
-  { name: "Html & css", percentage: 60 },
-  { name: "Javscript", percentage: 60 },
-  { name: "React js", percentage: 60 },
-  { name: "Node Js", percentage: 60 },
-  { name: "php", percentage: 60 },
-  { name: "Symfony", percentage: 60 },
+  { name: "Html & css", percentage: 90 },
+  { name: "Javscript", percentage: 65 },
+  { name: "React js", percentage: 70},
+  { name: "Node Js", percentage: 35 },
+  { name: "php", percentage: 35 },
+  { name: "Symfony", percentage: 30 },
 ];
 
 

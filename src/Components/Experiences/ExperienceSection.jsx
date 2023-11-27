@@ -9,17 +9,17 @@ const experiencesData = [
   {
     imgSrc: logoCnfs,
     title: "Conseiller Numérique",
-    description: "E.N.S.E.M.B.L.E.",
+    description: "E.N.S.E.M.B.L.E. (CDD)",
   },
   {
     imgSrc: logoGeniunom,
     title: "Développeur application saas",
-    description: "GENIUNOM",
+    description: "GENIUNOM (Stage)",
   },
   {
     imgSrc: logoPoles,
     title: "Développeur integrateur web",
-    description: "PoleS ",
+    description: "PoleS (CDDI)",
   },
 ];
 
