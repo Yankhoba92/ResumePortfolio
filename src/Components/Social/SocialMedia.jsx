@@ -1,8 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload} from "@fortawesome/free-solid-svg-icons";
-import Twiter from "../../assets/media/twitter.png"
-import Linkedin from "../../assets/media/linkedin.png"
-import Github from "../../assets/media/github.png"
 import "./SocialMedia.css"
 
 const SocialMedia = () => {
@@ -18,7 +13,7 @@ const SocialMedia = () => {
             target="_blank"
             className="special-section"
           >
-            <img src={Twiter} alt="" />
+            <i class="fa-brands fa-twitter"></i>
             {/* <FontAwesomeIcon icon={faDownload} beat /> */}
           </a>
           <a
@@ -26,14 +21,14 @@ const SocialMedia = () => {
             target="_blank"
             className="special-section"
           >
-            <img src={Github} alt="" />
+            <i class="fa-brands fa-linkedin"></i>
           </a>
           <a
             href="https://www.linkedin.com/in/yankhoba-bagayoko/"
             target="_blank"
             className="special-section"
           >
-            <img src={Linkedin} alt="" />
+            <i class="fa-brands fa-github"></i>
           </a>
         </div>
       </div>
